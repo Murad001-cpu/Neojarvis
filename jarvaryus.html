@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#020608">
+<title>Jarvis: Azərbaycan dilində səsli köməkçi</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='34' fill='%2338d6ee'/%3E%3Ccircle cx='50' cy='50' r='10' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+:root{--bg:#020608;--ink:#dff6fa;--mute:#6a8793;--line:#14323c;--cy:#5fd8ec;--surf:#0a1519;color-scheme:dark;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:radial-gradient(ellipse at 50% 18%,#07202a 0,var(--bg) 60%),var(--bg);color:var(--ink);font:15px/1.65 ui-monospace,"JetBrains Mono",Menlo,Consolas,monospace}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(#0d252d33 1px,transparent 1px) 0 0/48px 48px,linear-gradient(90deg,#0d252d33 1px,transparent 1px) 0 0/48px 48px}
+main{position:relative;max-width:920px;margin:0 auto;padding:0 22px 60px}
+.top{display:flex;justify-content:space-between;padding:20px 0;letter-spacing:.4em;font-size:13px}
+.top span{color:var(--mute);letter-spacing:.15em}
+.hero{text-align:center;padding:30px 0 40px}
+.orb{position:relative;width:min(70vw,300px);aspect-ratio:1;margin:0 auto 34px;color:#38d6ee;animation:cyc 14s linear infinite}
+.orb .g{position:absolute;inset:10%;border-radius:50%;background:radial-gradient(circle,currentColor,transparent 68%);opacity:.45;filter:blur(18px)}
+.orb .c{position:absolute;left:50%;top:50%;width:7%;height:7%;margin:-3.5%;border-radius:50%;background:radial-gradient(circle,#fff 25%,currentColor);box-shadow:0 0 50px 24px currentColor;animation:br 4s ease-in-out infinite}
+.orb svg{position:absolute;inset:0;width:100%;height:100%;fill:none;stroke:currentColor}
+.orb g{transform-origin:100px 100px}
+.a{animation:sp 80s linear infinite}.b{animation:sp 18s linear infinite reverse}.d{animation:sp 28s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}@keyframes br{50%{transform:scale(1.25)}}
+@keyframes cyc{0%,100%{color:#38d6ee}20%{color:#2f7bff}40%{color:#ffc400}60%{color:#22e06a}80%{color:#ff3b3b}}
+h1{font-size:clamp(34px,8vw,64px);letter-spacing:.35em;margin:0 0 6px;padding-left:.35em}
+.sub{color:var(--mute);max-width:520px;margin:0 auto 28px;font-family:system-ui,sans-serif;font-size:17px}
+.btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 26px;border:1px solid var(--cy);border-radius:4px;color:var(--cy);text-decoration:none;letter-spacing:.14em;font-weight:700;font-size:14px}
+.btn.p{background:var(--cy);color:#00181d}
+.btn:hover{box-shadow:0 0 18px #5fd8ec55}
+.btn:focus-visible,a:focus-visible{outline:2px solid var(--cy);outline-offset:3px}
+.leg{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-top:30px;color:var(--mute);font-size:13px}
+.leg i{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;vertical-align:middle}
+h2{color:var(--cy);letter-spacing:.3em;font-size:13px;margin:46px 0 6px}
+.row{display:grid;grid-template-columns:200px 1fr;gap:6px 24px;padding:14px 0;border-bottom:1px dashed var(--line)}
+.row b{letter-spacing:.06em}
+.row span{color:var(--mute)}
+.note{margin-top:30px;padding:16px;border:1px solid var(--line);color:var(--mute);font-size:13px}
+.note a{color:var(--cy)}
+footer{margin-top:40px;color:var(--mute);font-size:12px;text-align:center}
+@media (max-width:640px){.row{grid-template-columns:1fr;gap:2px}}
+@media (prefers-reduced-motion:reduce){.orb,.orb *{animation:none!important}}
+</style>
+</head>
+<body>
+<main>
+  <div class="top">JARVIS <span>v1</span></div>
+
+  <section class="hero">
+    <div class="orb" aria-hidden="true">
+      <div class="g"></div>
+      <svg viewBox="0 0 200 200">
+        <g class="a"><circle cx="100" cy="100" r="97" stroke-width="1.6" stroke-dasharray="1 24" opacity=".7"/></g>
+        <g class="b"><circle cx="100" cy="100" r="92" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="110 470" opacity=".6"/></g>
+        <g class="d"><ellipse cx="100" cy="100" rx="72" ry="63" stroke-width=".9" stroke-dasharray="260 190" opacity=".4"/><ellipse cx="100" cy="100" rx="60" ry="72" stroke-width="1.2" stroke-dasharray="150 260" opacity=".45" transform="rotate(100 100 100)"/><circle cx="100" cy="100" r="46" stroke-width=".8" stroke-dasharray="120 170" opacity=".4"/></g>
+      </svg>
+      <div class="c"></div>
+    </div>
+    <h1>JARVIS</h1>
+    <p class="sub">Azərbaycan dilində danışan, səni eşidən və kameranla görən şəxsi səsli köməkçi.</p>
+    <div class="btns">
+      <a class="btn p" href="jarvis.html" download="jarvis.html">Jarvis-i yüklə</a>
+      <a class="btn" href="jarvis.html">Brauzerdə aç</a>
+    </div>
+    <div class="leg">
+      <span><i style="background:#2f7bff"></i>eşidir</span>
+      <span><i style="background:#ffc400"></i>düşünür</span>
+      <span><i style="background:#22e06a"></i>danışır</span>
+      <span><i style="background:#ff3b3b"></i>xəta</span>
+    </div>
+  </section>
+
+  <h2>İMKANLAR</h2>
+  <div class="row"><b>Səsli söhbət</b><span>Azərbaycan dili əsasdır. Rus, ingilis, türk, fransız və alman dilləri də var.</span></div>
+  <div class="row"><b>Oyanış sözü</b><span>“Jarvis oyan” deyəndə mikrofona toxunmadan cavab verir.</span></div>
+  <div class="row"><b>Kamera</b><span>“Bu nədir?” deyəndə kameradakı kadrı görüb cavab verir.</span></div>
+  <div class="row"><b>Video redaktor</b><span>Kəsmək, sürətləndirmək, filtr, yazı əlavə etmək, səsi silmək.</span></div>
+  <div class="row"><b>Hava və xəritə</b><span>Yerləşdiyin şəhərin havası və xəritəsi.</span></div>
+  <div class="row"><b>Zamanlayıcı</b><span>“10 dəqiqəlik taymer qur” və kronometr, xatırlatmalar.</span></div>
+  <div class="row"><b>Öz səsin</b><span>İstəsən ElevenLabs ilə seçdiyin səslə danışır.</span></div>
+
+  <h2>QURAŞDIRMA</h2>
+  <div class="row"><b>Kompüter</b><span>Chrome və ya Edge-də “Brauzerdə aç” düyməsinə bas. Brauzer menyusundan səhifəni tətbiq kimi quraşdır, sonra masa üstündən açılır.</span></div>
+  <div class="row"><b>Android</b><span>Chrome-da aç, ⋮ menyusundan “Ana ekrana əlavə et” seç.</span></div>
+  <div class="row"><b>iPhone / iPad</b><span>Safari-də aç, Paylaş düyməsindən “Ana ekrana əlavə et” seç.</span></div>
+  <div class="row"><b>İlk açılış</b><span>Giriş ekranında API açarını yapışdır. Pulsuz Google Gemini açarını <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer" style="color:var(--cy)">aistudio.google.com/apikey</a> səhifəsindən ala bilərsən.</span></div>
+
+  <div class="note">
+    Açarın yalnız sənin cihazının brauzerində saxlanılır, heç bir serverə göndərilmir. Yüklənmiş faylı birbaşa kompüterdən açsan brauzer mikrofon və kamera icazəsini hər dəfə yenidən soruşa bilər. Daimi icazə üçün “Brauzerdə aç” düyməsini işlət. Səs tanıma Chrome, Edge və Safari-də və yalnız internet olanda işləyir.
+  </div>
+  <footer>Jarvis · Claude ilə hazırlanıb</footer>
+</main>
+</body>
+</html>
